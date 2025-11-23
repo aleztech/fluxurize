@@ -1,94 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Companion for n8n — Terms and Conditions | Fluxurize</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>Terms and Conditions — Companion for n8n | Fluxurize</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Satoshi Font -->
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+
   <style>
-    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; background: #05070b; color: #f7f7f7; }
-    main { max-width: 900px; margin: 0 auto; padding: 32px 20px 40px; }
-    h1 { font-size: 28px; margin-bottom: 16px; }
-    h2 { margin-top: 24px; font-size: 20px; }
-    p { line-height: 1.6; max-width: 760px; }
-    ul { max-width: 760px; }
-    a { color: #41a5ff; }
-    footer { border-top: 1px solid #1f2933; margin-top: 40px; padding-top: 20px; font-size: 13px; opacity: 0.7; }
+    :root {
+      --bg: #050609;
+      --bg-card: rgba(8, 12, 22, 0.9);
+      --radius-lg: 22px;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --text-main: #ffffff;
+      --text-muted: #9da7bc;
+      --accent-start: #b23cff;
+      --accent-end: #4f8cff;
+      --max-width: 900px;
+      --font-sans: "Satoshi", system-ui, -apple-system, BlinkMacSystemFont,
+        "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, #161c30 0, transparent 55%),
+        radial-gradient(circle at bottom right, #101626 0, transparent 55%),
+        var(--bg);
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      padding: 40px 18px 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    .card {
+      background: var(--bg-card);
+      backdrop-filter: blur(18px);
+      padding: 32px 26px 40px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+    }
+
+    /* Brand Header */
+    .brand {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .brand-title {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-subtitle {
+      margin-top: 4px;
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    em {
+      color: var(--text-muted);
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 26px;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    p {
+      line-height: 1.62;
+      margin-bottom: 14px;
+      color: var(--text-main);
+      opacity: 0.92;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 18px;
+      line-height: 1.6;
+      color: var(--text-main);
+      opacity: 0.92;
+    }
+
+    a {
+      color: var(--accent-end);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
   <main>
-    <h1>Terms and Conditions for Companion for n8n</h1>
-    <p><em>Last updated: November 2025</em></p>
+    <div class="card">
 
-    <h2>1. Introduction</h2>
-    <p>
-      These Terms and Conditions govern your use of the iOS application
-      <strong>Companion for n8n</strong> (the “App”), developed and published by
-      <strong>Fluxurize</strong>.
-    </p>
+      <div class="brand">
+        <div class="brand-title">FLUXURIZE</div>
+        <div class="brand-subtitle">Fluxurize Your World</div>
+      </div>
 
-    <h2>2. Independent product</h2>
-    <p>
-      Companion for n8n is an independent client and is not affiliated with, endorsed by,
-      or associated with n8n GmbH. All trademarks and product names are the property of
-      their respective owners.
-    </p>
+      <h1>Terms and Conditions for Companion for n8n</h1>
+      <p><em>Last updated: November 2025</em></p>
 
-    <h2>3. Use of the App</h2>
-    <p>
-      The App allows you to connect to one or more n8n instances that you control.
-      You are solely responsible for:
-    </p>
-    <ul>
-      <li>The configuration and security of your n8n server or servers</li>
-      <li>Any data processed by your n8n workflows</li>
-      <li>The API keys and credentials you provide to the App</li>
-    </ul>
+      <h2>1. Introduction</h2>
+      <p>
+        These Terms and Conditions govern your use of the iOS application
+        <strong>Companion for n8n</strong> (the “App”), developed and published by
+        <strong>Fluxurize</strong>.
+      </p>
 
-    <h2>4. Subscriptions and In App Purchases</h2>
-    <p>
-      The App may offer optional Pro features via one time purchases or subscriptions.
-      All purchases are processed by Apple through the App Store.
-      Subscription renewals and cancellations are managed via your Apple ID account settings.
-      Fluxurize does not handle refunds directly, any refund requests must be made through Apple.
-    </p>
+      <h2>2. Independent product</h2>
+      <p>
+        Companion for n8n is an independent client and is not affiliated with, endorsed by,
+        or associated with n8n GmbH. All trademarks and product names are the property of
+        their respective owners.
+      </p>
 
-    <h2>5. Disclaimer of warranties</h2>
-    <p>
-      The App is provided “as is” and “as available”, without warranties of any kind,
-      whether express or implied. You use the App at your own risk.
-    </p>
+      <h2>3. Use of the App</h2>
+      <p>
+        The App allows you to connect to one or more n8n instances that you control.
+        You are solely responsible for:
+      </p>
 
-    <h2>6. Limitation of liability</h2>
-    <p>
-      To the maximum extent permitted by law, Fluxurize shall not be liable for any loss of data,
-      loss of profits, or any other indirect, incidental, or consequential damages arising from
-      your use of the App or from the configuration of your own n8n instance.
-    </p>
+      <ul>
+        <li>The configuration and security of your n8n server or servers</li>
+        <li>Any data processed by your n8n workflows</li>
+        <li>The API keys and credentials you provide to the App</li>
+      </ul>
 
-    <h2>7. Termination</h2>
-    <p>
-      You may stop using the App at any time by uninstalling it from your device.
-      Fluxurize may suspend or discontinue the App, or specific features, at any time
-      without prior notice.
-    </p>
+      <p>
+        Fluxurize is not responsible for the operation, reliability, or security of your
+        self-hosted or cloud-hosted n8n environment.
+      </p>
 
-    <h2>8. Changes to these Terms</h2>
-    <p>
-      We may update these Terms from time to time.
-      The latest version will be available within the App and on our website.
-      Continued use of the App after changes are published means you accept the updated Terms.
-    </p>
+      <h2>4. Subscriptions and In-App Purchases</h2>
+      <p>
+        The App may offer optional Pro features via one-time purchases or subscriptions.
+        All purchases are processed by Apple through the App Store.
+        Subscription renewals and cancellations are managed via your Apple ID settings.
+        Fluxurize does not handle refunds directly; refund requests must be submitted to Apple.
+      </p>
 
-    <h2>9. Contact</h2>
-    <p>
-      If you have questions about these Terms, you can contact us at:<br>
-      <a href="mailto:support@fluxurize.com">support@fluxurize.com</a>
-    </p>
+      <h2>5. Disclaimer of warranties</h2>
+      <p>
+        The App is provided “as is” and “as available”, without warranties of any kind,
+        whether express or implied. You use the App at your own risk and you are responsible
+        for ensuring that your n8n server is properly configured and secured.
+      </p>
 
-    <footer>
-      &copy; 2025 Fluxurize. All rights reserved. Companion for n8n is an independent client and is not affiliated with or endorsed by n8n GmbH.
-    </footer>
+      <h2>6. Limitation of liability</h2>
+      <p>
+        To the maximum extent permitted by law, Fluxurize shall not be liable for any loss of data,
+        failures caused by your own infrastructure, loss of profits, or any indirect or incidental
+        damages arising from your use of the App.
+      </p>
+
+      <h2>7. Termination</h2>
+      <p>
+        You may stop using the App at any time by uninstalling it from your device.
+        Fluxurize may suspend or discontinue the App, or specific features, at any time
+        without prior notice.
+      </p>
+
+      <h2>8. Changes to these Terms</h2>
+      <p>
+        We may update these Terms from time to time.
+        The latest version will be available within the App and on our website.
+        Continued use of the App after changes are published means that you accept the
+        updated Terms.
+      </p>
+
+      <h2>9. Contact</h2>
+      <p>
+        If you have any questions about these Terms, you can contact us at:<br />
+        <a href="mailto:support@fluxurize.com">support@fluxurize.com</a>
+      </p>
+
+      <footer>
+        © 2025 Fluxurize. All rights reserved. Companion for n8n is an independent client
+        and is not affiliated with or endorsed by n8n GmbH.
+      </footer>
+
+    </div>
   </main>
 </body>
 </html>
