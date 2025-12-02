@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Privacy policy — Fluxurize apps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Satoshi Font -->
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #050609;
+      --bg-card: rgba(8, 12, 22, 0.9);
+      --radius-lg: 22px;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --text-main: #ffffff;
+      --text-muted: #9da7bc;
+      --accent-start: #b23cff;
+      --accent-end: #4f8cff;
+      --max-width: 900px;
+      --font-sans: "Satoshi", system-ui, -apple-system, BlinkMacSystemFont,
+        "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, #161c30 0, transparent 55%),
+        radial-gradient(circle at bottom right, #101626 0, transparent 55%),
+        var(--bg);
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      padding: 40px 18px 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    .card {
+      background: var(--bg-card);
+      backdrop-filter: blur(18px);
+      padding: 32px 26px 40px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+    }
+
+    /* Brand Header */
+    .brand {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .brand-title {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-subtitle {
+      margin-top: 4px;
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    em {
+      color: var(--text-muted);
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 26px;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    p {
+      line-height: 1.62;
+      margin-bottom: 14px;
+      color: var(--text-main);
+      opacity: 0.92;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 18px;
+      line-height: 1.6;
+      color: var(--text-main);
+      opacity: 0.92;
+    }
+
+    a {
+      color: var(--accent-end);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="card">
+
+      <div class="brand">
+        <div class="brand-title">FLUXURIZE</div>
+        <div class="brand-subtitle">Fluxurize Your World</div>
+      </div>
+
+      <h1>Privacy policy for Fluxurize apps</h1>
+      <p><em>Last updated: November 2025</em></p>
+
+      <h2>1. Who we are</h2>
+      <p>
+        This privacy policy applies to the iOS applications developed and published by
+        <strong>Fluxurize</strong>, including <strong>Fluxurize n8n</strong>
+        and <strong>Fluxurize Make</strong>, as well as any future Fluxurize companion apps.
+        Fluxurize n8n is an independent client and is not affiliated with, endorsed by,
+        or associated with n8n GmbH.
+      </p>
+
+      <h2>2. Data we collect in Fluxurize n8n</h2>
+      <p>
+        Fluxurize does <strong>not</strong> collect any personal data from your use of the App.
+        We do not use analytics, tracking SDKs, advertising frameworks, or remote logging tools.
+        No user accounts are created and no information is sent to Fluxurize servers.
+      </p>
+
+      <h2>3. Data stored on your device</h2>
+      <p>
+        The App stores information locally on your device in order to function:
+      </p>
+
+      <ul>
+        <li>Configured n8n instance URLs</li>
+        <li>Authentication data such as API keys, stored securely using Apple Keychain</li>
+        <li>Your UI preferences, favorites and similar local settings</li>
+      </ul>
+
+      <p>
+        This data stays on your device and is only transmitted to the n8n instance that
+        <strong>you</strong> configure. Fluxurize does not have access to this data.
+        If you use iCloud backups, Apple may include this data in your device backups according
+        to your iOS settings.
+      </p>
+
+      <h2>4. Connections to your n8n instance</h2>
+      <p>
+        The App communicates directly with the n8n server endpoint that you provide.
+        You are responsible for the configuration and security of that server.
+        Fluxurize does not operate, host or manage your n8n instance.
+      </p>
+
+      <h2>5. In-App Purchases</h2>
+      <p>
+        The App offers an optional Pro version via In-App Purchases or subscriptions.
+        All payments are processed securely by Apple through StoreKit and the App Store.
+        Fluxurize does not receive or store your payment card details.
+        Information about your purchase, such as entitlement to Pro features, is stored locally
+        on your device using Apple signed receipts.
+      </p>
+
+      <h2>6. Children’s privacy</h2>
+      <p>
+        The App is not directed to children under the age required by local law.
+        We do not knowingly collect any personal information from children.
+      </p>
+
+      <h2>7. Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time.
+        The latest version will always be available within the App and on our website.
+      </p>
+
+      <h2>8. Contact</h2>
+      <p>
+        If you have any questions about this Privacy Policy or about privacy in the App,<br />
+        you can contact us at:  
+        <a href="mailto:fluxurize@gmail.com">fluxurize@gmail.com</a>
+      </p>
+
+      <footer>
+        © 2025 Fluxurize. All rights reserved. Companion for n8n is an independent client and is
+        not affiliated with or endorsed by n8n GmbH.
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
