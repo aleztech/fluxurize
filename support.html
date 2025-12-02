@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Support — Fluxurize apps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050609;
+      --bg-card: rgba(8, 12, 22, 0.9);
+      --radius-lg: 22px;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --text-main: #ffffff;
+      --text-muted: #9da7bc;
+      --accent-start: #b23cff;
+      --accent-end: #4f8cff;
+      --max-width: 900px;
+      --font-sans: "Satoshi", system-ui, -apple-system, BlinkMacSystemFont,
+        "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, #161c30 0, transparent 55%),
+        radial-gradient(circle at bottom right, #101626 0, transparent 55%),
+        var(--bg);
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      padding: 40px 18px 60px;
+      display: flex;
+      justify-content: center;
+    }
+
+    main {
+      width: 100%;
+      max-width: var(--max-width);
+    }
+
+    .card {
+      background: var(--bg-card);
+      backdrop-filter: blur(18px);
+      padding: 32px 26px 40px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65);
+    }
+
+    .brand {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .brand-title {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .brand-subtitle {
+      margin-top: 4px;
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 26px;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-top: 18px;
+      margin-bottom: 6px;
+    }
+
+    p {
+      line-height: 1.62;
+      margin-bottom: 14px;
+      color: var(--text-main);
+      opacity: 0.92;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 18px;
+      line-height: 1.6;
+      color: var(--text-main);
+      opacity: 0.92;
+    }
+
+    a {
+      color: var(--accent-end);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <div class="brand">
+        <div class="brand-title">FLUXURIZE</div>
+        <div class="brand-subtitle">Fluxurize Your World</div>
+      </div>
+
+      <h1>Support for Fluxurize apps</h1>
+      <p>
+        If you need help with <strong>Fluxurize n8n</strong>, <strong>Fluxurize Make</strong>
+        or any other Fluxurize app, you can use this page to contact us and find answers to common questions.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        For any support request, bug report or question, you can email us at:<br />
+        <a href="mailto:fluxurize@gmail.com">fluxurize@gmail.com</a>
+      </p>
+
+      <h2>Frequently asked questions</h2>
+
+      <h3>Fluxurize n8n</h3>
+      <ul>
+        <li>
+          <strong>My subscription is not unlocking Pro features.</strong><br />
+          Make sure you are signed in with the same Apple ID you used to purchase
+          <strong>Fluxurize n8n Pro Monthly</strong>, then use the “Restore purchase” option
+          inside the app. If the issue persists, contact us with your Apple ID region
+          and we will help you.
+        </li>
+        <li>
+          <strong>I cannot connect to my n8n instance.</strong><br />
+          Please check that your n8n server is reachable from your device,
+          that the URL is correct and that your API credentials are valid.
+          Remember that Fluxurize does not operate or host your n8n server.
+        </li>
+      </ul>
+
+      <h3>Fluxurize Make</h3>
+      <p>
+        Fluxurize Make is currently in development. Support information will be updated
+        when the app is released. In the meantime, you can still contact us using the email above
+        and we will assist you.
+      </p>
+
+      <h2>Legal</h2>
+      <p>
+        You can review the legal information for Fluxurize apps here:<br />
+        <a href="privacy.html">Privacy policy</a> ·
+        <a href="terms.html">Terms of Use</a>
+      </p>
+
+      <footer>
+        © 2025 Fluxurize. All rights reserved.
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
