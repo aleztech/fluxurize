@@ -2,279 +2,196 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Features, Companion for n8n | Fluxurize</title>
+  <title>Fluxurize n8n | Native iOS companion for automation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Compare what is included in the Free and Pro plans of Companion for n8n, the native iOS client by Fluxurize for your n8n workflows."
-  />
-
-  <!-- Satoshi font -->
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --bg: #050609;
-      --bg-card: #070910;
-      --bg-chip: #111624;
-      --accent-start: #b23cff;
-      --accent-end: #4f8cff;
-      --accent-soft: rgba(111, 140, 255, 0.18);
-      --text-main: #ffffff;
-      --text-muted: #9da7bc;
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --radius-lg: 22px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 22px 60px rgba(0, 0, 0, 0.7);
-      --max-width: 920px;
-      --font-sans: "Satoshi", system-ui, -apple-system, BlinkMacSystemFont,
-        "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: var(--font-sans);
-      background:
-        radial-gradient(circle at top left, #171e34 0, transparent 50%),
-        radial-gradient(circle at bottom right, #101727 0, transparent 55%),
-        var(--bg);
-      color: var(--text-main);
-      display: flex;
-      justify-content: center;
-      padding: 40px 16px 60px;
-    }
-
-    main {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: auto;
-    }
-
-    .card {
-      background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.02),
-        rgba(4, 7, 18, 0.96)
-      );
-      border-radius: 28px;
-      padding: 36px 24px 30px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(22px);
-    }
-
-    .brand {
-      margin-bottom: 18px;
-      text-align: center;
-    }
-
-    .brand-title {
-      font-size: 30px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .brand-subtitle {
-      margin-top: 4px;
-      font-size: 14px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.86);
-    }
-
-    h1 {
-      font-size: clamp(26px, 4vw, 32px);
-      line-height: 1.1;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 15px;
-      line-height: 1.7;
-      max-width: 620px;
-      margin: 0 auto 18px;
-      text-align: center;
-    }
-
-    .section-title {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .features {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-      margin-bottom: 18px;
-      padding-left: 0;
-    }
-
-    .features li {
-      display: flex;
-      gap: 8px;
-      font-size: 14px;
-      color: var(--text-main);
-      line-height: 1.4;
-    }
-
-    .features li span.icon {
-      color: #46e39a;
-      font-size: 16px;
-      margin-top: 1px;
-    }
-
-    section#features > div + div .features li span.icon {
-      color: #ffcf5c;
-    }
-
-    section#features {
-      margin-top: 16px;
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 16px;
-      font-size: 13px;
-      color: #c0d2ff;
-      text-decoration: none;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
-    }
-
-    @media (min-width: 800px) {
-      .card {
-        padding: 42px 40px 34px;
-      }
-    }
-  </style>
+  <meta name="description" content="Fluxurize n8n is the native iOS companion for n8n, focused on clarity, speed and privacy so you can monitor and trigger workflows from anywhere." />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-  <main>
-    <div class="card">
-      <div class="brand">
-        <div class="brand-title">FLUXURIZE</div>
-        <div class="brand-subtitle">Fluxurize Your World</div>
-      </div>
-
-      <h1>Companion for n8n, features</h1>
-      <p class="subtitle">
-        Compare what is included in the Free and Pro plans for Companion for n8n.
-      </p>
-
-      <section id="features">
-        <p class="section-title">Features</p>
-
-        <!-- Free plan -->
-        <div style="margin-bottom: 18px;">
-          <h3 style="font-size:16px;margin:4px 0 6px 0;">Free plan</h3>
-          <p style="color:#9da7bc;font-size:13px;margin:0 0 10px 0;max-width:520px;">
-            All essential functionality is fully available in the Free plan, with no artificial limits.
-          </p>
-          <ul class="features" style="margin-bottom:6px;">
-            <li>
-              <span class="icon">✓</span>
-              <span>Connect to self hosted or n8n Cloud instances.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Unlimited instances and unlimited workflows.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Secure authentication with API Key, Basic Auth or token.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Test connection to validate endpoints before using them.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Browse workflows with filtering and search and see activation status.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Trigger workflows manually when they allow manual runs.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>View recent execution history for each workflow.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Light and dark mode.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Credentials stored securely in Apple Keychain.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Local caching for smooth, almost offline ready browsing.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Pro plan -->
-        <div>
-          <h3 style="font-size:16px;margin:10px 0 6px 0;">Pro plan</h3>
-          <p style="color:#9da7bc;font-size:13px;margin:0 0 10px 0;max-width:520px;">
-            The Pro plan adds advanced monitoring, alerts and a health dashboard. All features work locally against your own n8n instances.
-          </p>
-          <ul class="features">
-            <li>
-              <span class="icon">★</span>
-              <span>Advanced statistics, executions by date range, error rate per workflow and average execution time.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Trend indicators and summaries to see how workflows evolve over time.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Configurable alerts for high error rates and workflows that stop running.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Instance level alerts when an instance becomes unresponsive.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Health dashboard with a global overview of all instances and workflows with problems.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Data export of metrics to CSV or JSON, ready to share from the system share sheet.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Optional AI insights, if enabled in your instance, with suggestions to optimise workflows and interpret errors.</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <a class="back-link" href="index.html">← Back to home</a>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="index.html">Fluxurize</a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#vision">Vision</a>
+        <a href="#">Changelog</a>
+        <a href="mailto:hello@fluxurize.com">Contact</a>
+      </nav>
+      <a class="btn btn-secondary" href="index.html#products">Apps for iOS</a>
     </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="aurora aurora-1" data-parallax data-speed="0.15"></div>
+      <div class="aurora aurora-2" data-parallax data-speed="0.1"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Product</div>
+          <h1 class="hero-title">Fluxurize n8n</h1>
+          <p class="hero-subtitle">Native iOS companion for n8n, focused on clarity, speed and privacy.</p>
+          <p class="lead">Connect your instances, quickly check what is running and trigger the workflows you care about, without fighting complex dashboards.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="https://apps.apple.com" target="_blank" rel="noreferrer">Download on the App Store</a>
+            <a class="btn btn-secondary" href="index.html">Back to main site</a>
+          </div>
+          <div class="pill-row">
+            <span class="pill">Supports self hosted and n8n Cloud</span>
+            <span class="pill">Keychain for credentials</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal" data-parallax data-speed="0.05">
+          <div class="app-mockup">
+            <div class="inner">
+              <img src="images/n8n-screen-hero.png" alt="Fluxurize n8n app preview" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">Features</div>
+          <h2 class="section-title">Built for people who actually use n8n</h2>
+          <p class="section-subtitle">Every detail is tuned for quick clarity, safe actions and privacy by default.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card reveal">
+            <h4>Multiple instances</h4>
+            <p>Add self hosted endpoints or n8n Cloud, switch instantly and stay connected.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h4>Secure by design</h4>
+            <p>API keys stored in Keychain, no Fluxurize servers in the middle.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h4>Workflow overview</h4>
+            <p>Browse workflows with search and filters, see what is active and healthy.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h4>Manual runs on the go</h4>
+            <p>Trigger workflows you already trust, directly from your phone.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h4>Execution history</h4>
+            <p>See recent runs and high level status in seconds so you can react faster.</p>
+          </div>
+          <div class="feature-card reveal">
+            <h4>Dark mode first</h4>
+            <p>Interfaces designed for people who live in dark mode and move fast.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">How it works</div>
+          <h2 class="section-title">Connect, secure, stay on top</h2>
+        </div>
+        <div class="grid-3">
+          <div class="subtle-card">
+            <h4 style="margin:0 0 6px 0;">Connect your instance</h4>
+            <p class="muted" style="margin:0;">Add your endpoint, choose the auth type, test and save.</p>
+          </div>
+          <div class="subtle-card">
+            <h4 style="margin:0 0 6px 0;">Secure your key</h4>
+            <p class="muted" style="margin:0;">Your credentials go directly into the iOS keychain.</p>
+          </div>
+          <div class="subtle-card">
+            <h4 style="margin:0 0 6px 0;">Stay on top of workflows</h4>
+            <p class="muted" style="margin:0;">Check workflows and executions whenever you need, without opening a laptop.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Screenshots</div>
+          <h2 class="section-title">A glimpse of the app</h2>
+          <p class="section-subtitle">A few screens so you can get a feel for the app.</p>
+        </div>
+        <div class="grid-2" style="gap:16px;">
+          <div class="app-mockup" style="aspect-ratio:9/16;">
+            <div class="inner">
+              <img src="images/n8n-screen-1.png" alt="Workflows list" />
+            </div>
+          </div>
+          <div class="app-mockup" style="aspect-ratio:9/16;">
+            <div class="inner">
+              <img src="images/n8n-screen-2.png" alt="Workflow detail" />
+            </div>
+          </div>
+          <div class="app-mockup" style="aspect-ratio:9/16;">
+            <div class="inner">
+              <img src="images/n8n-screen-3.png" alt="Executions history" />
+            </div>
+          </div>
+          <div class="app-mockup" style="aspect-ratio:9/16;">
+            <div class="inner">
+              <img src="images/n8n-screen-4.png" alt="Settings" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">FAQ</div>
+          <h2 class="section-title">Answers to common questions</h2>
+        </div>
+        <div class="faq">
+          <div class="faq-item">
+            <h4>Do you proxy my traffic?</h4>
+            <p>No. The app connects directly from your device to your n8n instances.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Where are my credentials stored?</h4>
+            <p>In the iOS keychain. Fluxurize does not host or store them.</p>
+          </div>
+          <div class="faq-item">
+            <h4>What kind of instances are supported?</h4>
+            <p>Self hosted setups over HTTPS and n8n Cloud, as long as they are reachable from your device.</p>
+          </div>
+          <div class="faq-item">
+            <h4>Do you track how I use the app?</h4>
+            <p>No tracking SDKs. We keep analytics to a bare minimum and do not correlate your workflows.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container surface-highlight" style="text-align:center;">
+        <div class="section-kicker" style="margin:0 auto 12px auto;">Ready</div>
+        <h2 class="section-title" style="margin-bottom:10px;">Ready to keep your n8n workflows closer</h2>
+        <p class="section-subtitle" style="margin:0 auto 18px auto; max-width:640px;">Install Fluxurize n8n and start treating your automations like something you can check and trust at any time.</p>
+        <a class="btn btn-primary" href="https://apps.apple.com" target="_blank" rel="noreferrer">Download on the App Store</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap;">
+      <span>© Fluxurize, 2025</span>
+      <nav>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
