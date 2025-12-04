@@ -2,279 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Features, Companion for Make | Fluxurize</title>
+  <title>Fluxurize Make | iOS companion for Make scenarios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Compare the Free and Pro features of Companion for Make, the native iOS client by Fluxurize to monitor and control your Make scenarios."
-  />
-
-  <!-- Satoshi font -->
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --bg: #050609;
-      --bg-card: #070910;
-      --bg-chip: #111624;
-      --accent-start: #b23cff;
-      --accent-end: #4f8cff;
-      --accent-soft: rgba(111, 140, 255, 0.18);
-      --text-main: #ffffff;
-      --text-muted: #9da7bc;
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --radius-lg: 22px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 22px 60px rgba(0, 0, 0, 0.7);
-      --max-width: 920px;
-      --font-sans: "Satoshi", system-ui, -apple-system, BlinkMacSystemFont,
-        "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: var(--font-sans);
-      background:
-        radial-gradient(circle at top left, #171e34 0, transparent 50%),
-        radial-gradient(circle at bottom right, #101727 0, transparent 55%),
-        var(--bg);
-      color: var(--text-main);
-      display: flex;
-      justify-content: center;
-      padding: 40px 16px 60px;
-    }
-
-    main {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: auto;
-    }
-
-    .card {
-      background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.02),
-        rgba(4, 7, 18, 0.96)
-      );
-      border-radius: 28px;
-      padding: 36px 24px 30px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(22px);
-    }
-
-    .brand {
-      margin-bottom: 18px;
-      text-align: center;
-    }
-
-    .brand-title {
-      font-size: 30px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .brand-subtitle {
-      margin-top: 4px;
-      font-size: 14px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.86);
-    }
-
-    h1 {
-      font-size: clamp(26px, 4vw, 32px);
-      line-height: 1.1;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 15px;
-      line-height: 1.7;
-      max-width: 620px;
-      margin: 0 auto 18px;
-      text-align: center;
-    }
-
-    .section-title {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .features {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-      margin-bottom: 18px;
-      padding-left: 0;
-    }
-
-    .features li {
-      display: flex;
-      gap: 8px;
-      font-size: 14px;
-      color: var(--text-main);
-      line-height: 1.4;
-    }
-
-    .features li span.icon {
-      color: #46e39a;
-      font-size: 16px;
-      margin-top: 1px;
-    }
-
-    section#features > div + div .features li span.icon {
-      color: #ffcf5c;
-    }
-
-    section#features {
-      margin-top: 16px;
-    }
-
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 16px;
-      font-size: 13px;
-      color: #c0d2ff;
-      text-decoration: none;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
-    }
-
-    @media (min-width: 800px) {
-      .card {
-        padding: 42px 40px 34px;
-      }
-    }
-  </style>
+  <meta name="description" content="Fluxurize Make is an iOS companion for Make scenarios, focused on quick visibility and control with a privacy-first approach." />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-  <main>
-    <div class="card">
-      <div class="brand">
-        <div class="brand-title">FLUXURIZE</div>
-        <div class="brand-subtitle">Fluxurize Your World</div>
-      </div>
-
-      <h1>Companion for Make, features</h1>
-      <p class="subtitle">
-        Compare what is included in the Free and Pro plans for Companion for Make.
-      </p>
-
-      <section id="features">
-        <p class="section-title">Features</p>
-
-        <!-- Free plan -->
-        <div style="margin-bottom: 18px;">
-          <h3 style="font-size:16px;margin:4px 0 6px 0;">Free plan</h3>
-          <p style="color:#9da7bc;font-size:13px;margin:0 0 10px 0;max-width:520px;">
-            The Free plan lets you connect one Make account and control your scenarios from your phone with no ads or distractions.
-          </p>
-          <ul class="features" style="margin-bottom:6px;">
-            <li>
-              <span class="icon">✓</span>
-              <span>Connect a single Make account using your API key.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>See all your scenarios with name, status and last run result.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Activate or deactivate scenarios quickly when something needs to be paused or resumed.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Trigger scenarios manually with a single tap when Make allows it.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>View a limited recent execution history, last 5 runs, for each scenario.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Light and dark mode that follow your system settings.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Credentials stored securely in Apple Keychain, no external backend.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Smooth browsing with local caching so you are almost offline ready.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Pro plan -->
-        <div>
-          <h3 style="font-size:16px;margin:10px 0 6px 0;">Pro plan</h3>
-          <p style="color:#9da7bc;font-size:13px;margin:0 0 10px 0;max-width:520px;">
-            The Pro plan unlocks multiple Make accounts, deeper history, alerts and a health dashboard designed for people who rely on automation every day.
-          </p>
-          <ul class="features">
-            <li>
-              <span class="icon">★</span>
-              <span>Connect multiple Make accounts, perfect for freelancers, agencies or separate work and personal workspaces.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Extended execution history per scenario, up to 50–100 runs, for real troubleshooting and audits.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Configurable alerts for failed scenarios, repeated errors and scenarios that stop running unexpectedly.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Health dashboard with a global overview of failures, inactive scenarios and recent changes across all accounts.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Mark important scenarios as favourites to keep them always at the top of your list.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Automatic grouping by naming patterns so you can see scenarios by client or project at a glance.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Advanced filters to focus on failing, active or recently updated scenarios only.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Add local technical notes to scenarios to remember context, owners or TODOs.</span>
-            </li>
-            <li>
-              <span class="icon">★</span>
-              <span>Optional read only mode per account when you need visibility without the risk of changing anything.</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <a class="back-link" href="index.html">← Back to home</a>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="index.html">Fluxurize</a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#vision">Vision</a>
+        <a href="#">Changelog</a>
+        <a href="mailto:hello@fluxurize.com">Contact</a>
+      </nav>
+      <a class="btn btn-secondary" href="index.html#products">Apps for iOS</a>
     </div>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="aurora aurora-1" data-parallax data-speed="0.15"></div>
+      <div class="aurora aurora-2" data-parallax data-speed="0.1"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Product, coming soon</div>
+          <h1 class="hero-title">Fluxurize Make</h1>
+          <p class="hero-subtitle">An iOS companion for Make scenarios, focused on quick visibility and control.</p>
+          <p class="lead">Keep an eye on the scenarios that matter, follow runs and errors, and react faster when something breaks.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary disabled" aria-disabled="true" href="#">Coming soon</a>
+            <a class="btn btn-secondary" href="index.html">Back to main site</a>
+          </div>
+          <div class="pill-row">
+            <span class="pill">Private beta in development</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal" data-parallax data-speed="0.05">
+          <div class="app-mockup">
+            <div class="inner">
+              <img src="images/make-screen-hero.png" alt="Fluxurize Make preview" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">Planned capabilities</div>
+          <h2 class="section-title">Designed for teams that rely on Make</h2>
+          <p class="section-subtitle">Fluxurize Make focuses on the information that matters when scenarios run your business.</p>
+        </div>
+        <div class="grid-2">
+          <div class="card reveal">
+            <div class="badge" style="margin-bottom:8px;">Planned</div>
+            <h3>Scenario overview</h3>
+            <p>See key scenarios at a glance, with status and last run.</p>
+          </div>
+          <div class="card reveal">
+            <div class="badge" style="margin-bottom:8px;">Planned</div>
+            <h3>Runs and errors</h3>
+            <p>Quickly check recent runs and spot failures.</p>
+          </div>
+          <div class="card reveal">
+            <div class="badge" style="margin-bottom:8px;">Planned</div>
+            <h3>Focused notifications</h3>
+            <p>Get information that matters, not noise.</p>
+          </div>
+          <div class="card reveal">
+            <div class="badge" style="margin-bottom:8px;">Non negotiable</div>
+            <h3>Secure access</h3>
+            <p>Keeping credentials safe will remain non negotiable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Screenshots</div>
+          <h2 class="section-title">Conceptual previews</h2>
+          <p class="section-subtitle">Early design captures to share the direction.</p>
+        </div>
+        <div class="grid-2" style="gap:16px;">
+          <div class="app-mockup" style="aspect-ratio:9/16;">
+            <div class="inner">
+              <img src="images/make-screen-1.png" alt="Scenario overview" />
+            </div>
+          </div>
+          <div class="app-mockup" style="aspect-ratio:9/16;">
+            <div class="inner">
+              <img src="images/make-screen-2.png" alt="Runs and errors" />
+            </div>
+          </div>
+          <div class="app-mockup" style="aspect-ratio:9/16;">
+            <div class="inner">
+              <img src="images/make-screen-3.png" alt="Notifications" />
+            </div>
+          </div>
+          <div class="app-mockup" style="aspect-ratio:9/16;">
+            <div class="inner">
+              <img src="images/make-screen-4.png" alt="Settings" />
+            </div>
+          </div>
+        </div>
+        <p class="meta-note" style="margin-top:12px;">Visuals are conceptual and will evolve with feedback.</p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container surface-highlight" style="text-align:center;">
+        <div class="section-kicker" style="margin:0 auto 12px auto;">Waitlist</div>
+        <h2 class="section-title" style="margin-bottom:10px;">Want to hear when Fluxurize Make is ready?</h2>
+        <p class="section-subtitle" style="margin:0 auto 18px auto; max-width:640px;">Fluxurize Make will be the second app in the family. If you rely on Make to keep things running, we want to build something that actually helps.</p>
+        <a class="btn btn-primary" href="mailto:hello@fluxurize.com">Contact us</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap;">
+      <span>© Fluxurize, 2025</span>
+      <nav>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>

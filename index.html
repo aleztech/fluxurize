@@ -2,526 +2,218 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Fluxurize, companion apps for n8n and Make</title>
+  <title>Fluxurize, software for automation and intelligent workflows</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Fluxurize builds native iOS companion apps for automation platforms like n8n and Make, so you can monitor and control your workflows securely from your iPhone with no tracking."
-  />
-
-  <!-- Satoshi font (Fontshare) -->
-  <link
-    href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    :root {
-      --bg: #050609;
-      --bg-card: #070910;
-      --bg-chip: #111624;
-      --accent-start: #b23cff;
-      --accent-end: #4f8cff;
-      --accent-soft: rgba(111, 140, 255, 0.18);
-      --text-main: #ffffff;
-      --text-muted: #9da7bc;
-      --border-subtle: rgba(255, 255, 255, 0.08);
-      --radius-lg: 20px;
-      --radius-pill: 999px;
-      --shadow-soft: 0 22px 60px rgba(0, 0, 0, 0.7);
-      --max-width: 960px;
-      --font-sans: "Satoshi", system-ui, -apple-system, BlinkMacSystemFont,
-        "SF Pro Text", "Segoe UI", Roboto, sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      min-height: 100vh;
-      font-family: var(--font-sans);
-      background:
-        radial-gradient(circle at top left, #171e34 0, transparent 50%),
-        radial-gradient(circle at bottom right, #101727 0, transparent 55%),
-        var(--bg);
-      color: var(--text-main);
-      display: flex;
-      justify-content: center;
-      padding: 32px 16px;
-    }
-
-    main {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: auto;
-    }
-
-    .card {
-      background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.02),
-        rgba(4, 7, 18, 0.96)
-      );
-      border-radius: 28px;
-      padding: 32px 22px 26px;
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(22px);
-    }
-
-    @media (min-width: 800px) {
-      .card {
-        padding: 40px 42px 32px;
-      }
-
-      .layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-        gap: 40px;
-        align-items: center;
-      }
-    }
-
-    header {
-      margin-bottom: 24px;
-      text-align: center;
-    }
-
-    .brand {
-      margin-bottom: 22px;
-    }
-
-    .brand-title {
-      font-size: 30px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .brand-subtitle {
-      margin-top: 4px;
-      font-size: 14px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.86);
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border-radius: var(--radius-pill);
-      background: var(--accent-soft);
-      border: 1px solid rgba(130, 157, 255, 0.5);
-      color: #e3ebff;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: clamp(26px, 4vw, 32px);
-      line-height: 1.1;
-      margin-top: 16px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      color: var(--text-muted);
-      font-size: 15px;
-      line-height: 1.7;
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    .cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin-top: 22px;
-      margin-bottom: 20px;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 11px 18px;
-      border-radius: var(--radius-pill);
-      border: none;
-      background: linear-gradient(135deg, var(--accent-start), var(--accent-end));
-      color: #fff;
-      font-size: 15px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 12px 32px rgba(79, 140, 255, 0.6);
-      cursor: pointer;
-      transition: transform 0.12s ease, box-shadow 0.12s ease,
-        filter 0.12s ease;
-      white-space: nowrap;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 44px rgba(79, 140, 255, 0.85);
-      filter: brightness(1.04);
-    }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-subtle);
-      background: rgba(5, 8, 20, 0.7);
-      color: var(--text-muted);
-      font-size: 14px;
-      text-decoration: none;
-      gap: 8px;
-      white-space: nowrap;
-    }
-
-    .btn-ghost span.icon {
-      font-size: 15px;
-    }
-
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 22px;
-      font-size: 12px;
-      color: var(--text-muted);
-      justify-content: center;
-    }
-
-    .chip {
-      padding: 5px 10px;
-      border-radius: var(--radius-pill);
-      background: var(--bg-chip);
-      border: 1px solid var(--border-subtle);
-    }
-
-    .section-title {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .features {
-      list-style: none;
-      display: grid;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
-
-    .features li {
-      display: flex;
-      gap: 8px;
-      font-size: 14px;
-      color: var(--text-main);
-    }
-
-    .features li span.icon {
-      color: #46e39a;
-      font-size: 16px;
-      margin-top: 1px;
-    }
-
-    .aside {
-      margin-top: 22px;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      background: rgba(6, 10, 26, 0.95);
-      padding: 14px 14px 12px;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .aside strong {
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .panel {
-      margin-top: 22px;
-      padding: 14px 14px 12px;
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      background: rgba(5, 8, 22, 0.9);
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .panel a {
-      color: #a8c0ff;
-      text-decoration: none;
-    }
-
-    .panel a:hover {
-      text-decoration: underline;
-    }
-
-    /* Other apps section */
-
-    .other-apps {
-      margin-top: 28px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .other-apps-title {
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-
-    .app-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    @media (min-width: 720px) {
-      .app-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    .app-card {
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      background: rgba(5, 8, 22, 0.9);
-      padding: 12px 14px 12px;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .app-card-title {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 4px;
-    }
-
-    .app-card-meta {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .app-card-actions {
-      margin-top: 8px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .app-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 8px;
-      border-radius: var(--radius-pill);
-      background: rgba(17, 22, 36, 0.9);
-      border: 1px solid var(--border-subtle);
-      font-size: 11px;
-      color: var(--text-muted);
-    }
-
-    footer {
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    footer nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #c0d2ff;
-    }
-
-    @media (max-width: 799px) {
-      .card {
-        padding: 24px 18px 20px;
-      }
-
-      .aside,
-      .panel {
-        margin-top: 18px;
-      }
-
-      .layout {
-        display: block;
-      }
-
-      footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <meta name="description" content="Fluxurize builds modern apps and tools powered by automation and applied intelligence, starting with native iOS companions for n8n and Make." />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23050712'/><text x='50' y='62' font-size='52' text-anchor='middle' fill='%23f7f7ff' font-family='Arial, sans-serif'>F</text></svg>" />
 </head>
 <body>
-<main>
-  <div class="card">
-    <header>
-      <div class="brand">
-        <div class="brand-title">FLUXURIZE</div>
-        <div class="brand-subtitle">Fluxurize Your World</div>
-      </div>
-
-      <span class="badge">
-        <span>Fluxurize n8n</span>
-        <span>•</span>
-        <span>iOS app</span>
-      </span>
-
-      <h1>Companion apps for your automations</h1>
-      <p class="subtitle">
-        Fluxurize builds native iOS companion apps for platforms like n8n and Make,
-        so you can monitor and control your workflows securely from your iPhone with no tracking.
-      </p>
-    </header>
-
-    <div class="layout">
-      <!-- Left column -->
-      <section>
-        <div class="cta-group">
-          <!-- TODO: sustituye # por la URL real de la App Store cuando la tengas -->
-          <a href="#" class="btn-primary">
-            <span>Download on the App Store</span>
-            <span class="icon"></span>
-          </a>
-
-          <a href="features.html" class="btn-ghost">
-            <span class="icon">▶</span>
-            <span>See what you can do</span>
-          </a>
-        </div>
-
-        <div class="meta">
-          <span class="chip">Works with n8n Cloud and self hosted</span>
-          <span class="chip">Secure credentials stored in Keychain</span>
-          <span class="chip">No external backend, no tracking</span>
-        </div>
-
-        <section id="features">
-          <p class="section-title">Main capabilities</p>
-          <ul class="features">
-            <li>
-              <span class="icon">✓</span>
-              <span>Connect to multiple n8n instances, cloud and self hosted, with secure API credentials.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Browse workflows with filters and search, check status and last run at a glance.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Trigger manual runs from your phone when you need to kick off automation on the go.</span>
-            </li>
-            <li>
-              <span class="icon">✓</span>
-              <span>Inspect recent executions to understand if a workflow is healthy or failing.</span>
-            </li>
-          </ul>
-        </section>
-
-        <div class="aside">
-          <strong>Privacy first.</strong>
-          Connections are created directly between your device and your n8n instances.
-          Companion for n8n does not proxy traffic, does not use a separate backend and does not collect analytics.
-        </div>
-      </section>
-
-      <!-- Right column -->
-      <section>
-        <div class="panel">
-          <p class="section-title">About Fluxurize</p>
-          <p>
-            <strong>Fluxurize</strong> designs native companion apps for automation platforms.
-            Companion for n8n is an independent client and is not affiliated with, sponsored by or endorsed by n8n GmbH.
-          </p>
-        </div>
-
-        <div class="panel" style="margin-top: 18px;">
-          <p class="section-title">Legal</p>
-          <p>
-            You can review the legal information for Fluxurize apps here:
-          </p>
-          <p style="margin-top: 6px;">
-            <a href="privacy.html">Privacy policy</a> ·
-            <a href="terms.html">Terms of Use</a> ·
-            <a href="support.html">Support</a>
-          </p>
-        </div>
-      </section>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="index.html">Fluxurize</a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#vision">Vision</a>
+        <a href="#">Changelog</a>
+        <a href="mailto:hello@fluxurize.com">Contact</a>
+      </nav>
+      <a class="btn btn-secondary" href="#products">Apps for iOS</a>
     </div>
+  </header>
 
-    <!-- Other apps by Fluxurize -->
-    <section class="other-apps">
-      <p class="other-apps-title">Other apps by Fluxurize</p>
-      <div class="app-list">
-        <!-- Card for Companion for Make -->
-        <article class="app-card">
-          <div class="app-card-meta">Automation companion</div>
-          <div class="app-card-title">Fluxurize Make</div>
-          <p>
-            Native iOS client for Make that lets you review scenarios, toggle them safely and keep an eye on your automations from your iPhone.
-          </p>
-          <div class="app-card-actions">
-            <a href="features-make.html" class="btn-ghost">
-              <span class="icon">▶</span>
-              <span>See features</span>
-            </a>
-            <span class="app-pill">Coming soon</span>
+  <main>
+    <section class="hero section">
+      <div class="aurora aurora-1" data-parallax data-speed="0.18"></div>
+      <div class="aurora aurora-2" data-parallax data-speed="0.1"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Automation, AI, native apps</span>
+          <h1 class="hero-title">Software for automation, built like a modern startup</h1>
+          <p class="hero-subtitle">Fluxurize creates native apps and tools that make your workflows easier to understand, control and trust, starting with companions for n8n and Make.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#products">Explore our products</a>
+            <a class="btn btn-secondary" href="https://apps.apple.com" target="_blank" rel="noreferrer">Download Fluxurize n8n</a>
           </div>
-        </article>
+          <div class="pill-row">
+            <span class="pill">Automation first</span>
+            <span class="pill">Privacy focused</span>
+            <span class="pill">Native iOS experience</span>
+            <span class="pill">No tracking, no proxy</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal" data-parallax data-speed="0.06">
+          <div class="app-mockup hero-mockup">
+            <div class="inner">
+              <img src="images/hero-app.png" alt="Fluxurize app preview" />
+            </div>
+          </div>
+          <div class="hero-meta-card" data-parallax data-speed="0.12">
+            <strong>Fluxurize studio</strong>
+            Automation, applied intelligence and crafted native experiences for people who live in workflows.
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer>
-      <span>© 2025 Fluxurize, companion apps for n8n and Make.</span>
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-header section-header-center">
+          <div class="section-kicker">Built for teams that live in automation</div>
+          <p class="section-subtitle">Whether you run security workflows, marketing automations or internal tooling, Fluxurize is designed to stay out of your way and keep you close to what matters.</p>
+        </div>
+        <div class="value-pillars">
+          <div class="card">
+            <h3>Fast to set up</h3>
+            <p>Connect your instances and get value in minutes with opinionated defaults and clean onboarding.</p>
+          </div>
+          <div class="card">
+            <h3>Designed for real work</h3>
+            <p>Everything is tuned for people who depend on automation daily: clear status, predictable actions, no fluff.</p>
+          </div>
+          <div class="card">
+            <h3>Ready for what is next</h3>
+            <p>Built to scale with new signals, deeper insights and more platforms without losing simplicity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">About</div>
+          <h2 class="section-title">What is Fluxurize</h2>
+          <p class="section-subtitle">Fluxurize is a software studio focused on automation, applied intelligence and native experiences. We build opinionated tools that reduce friction, give you visibility and help you trust your workflows again.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card reveal">
+            <h3>Automation native</h3>
+            <p>Built around platforms like n8n and Make to keep your automation close and actionable, not hidden behind dashboards.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Applied intelligence</h3>
+            <p>Insights that surface signals you can act on, turning noise into clarity without asking you to retrain your team.</p>
+          </div>
+          <div class="card reveal">
+            <h3>Native apps, real-time feel</h3>
+            <p>A crafted iOS experience with swift navigation, haptics and instant feedback so monitoring feels effortless.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-kicker">Products</div>
+          <h2 class="section-title">A family of tools around automation platforms</h2>
+          <p class="section-subtitle">Fluxurize focuses on building native companions for n8n and Make so you can stay close to workflows, runs and alerts wherever you are.</p>
+        </div>
+        <div class="grid-2">
+          <div class="product-card reveal">
+            <div class="product-head">
+              <h3>Fluxurize n8n</h3>
+              <span class="badge">Available now</span>
+            </div>
+            <p class="muted">A native iOS companion for n8n, so you can quickly check, trigger and monitor workflows from your phone.</p>
+            <ul class="bullet-list">
+              <li><span class="bullet-icon">•</span><span>Connect to multiple self hosted and n8n Cloud instances.</span></li>
+              <li><span class="bullet-icon">•</span><span>Secure credentials stored in Keychain.</span></li>
+              <li><span class="bullet-icon">•</span><span>Run workflows and inspect recent executions.</span></li>
+            </ul>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="features.html">View product page</a>
+              <a class="btn btn-secondary" href="https://apps.apple.com" target="_blank" rel="noreferrer">Get on the App Store</a>
+            </div>
+          </div>
+          <div class="product-card reveal">
+            <div class="product-head">
+              <h3>Fluxurize Make</h3>
+              <span class="badge">Coming soon</span>
+            </div>
+            <p class="muted">A focused companion for Make, built to keep an eye on scenarios, runs and errors without opening your laptop.</p>
+            <ul class="bullet-list">
+              <li><span class="bullet-icon">•</span><span>Stay close to your scenarios.</span></li>
+              <li><span class="bullet-icon">•</span><span>Follow runs and failures in seconds.</span></li>
+              <li><span class="bullet-icon">•</span><span>Designed for people who live in automation.</span></li>
+            </ul>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="features-make.html">View product page</a>
+              <a class="btn btn-ghost disabled" aria-disabled="true" href="#">Coming soon</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" class="section reveal">
+      <div class="container split">
+        <div>
+          <div class="section-kicker">Vision</div>
+          <h2 class="section-title">Our vision</h2>
+          <p class="section-subtitle">Our goal is to make automation feel less like a black box and more like a system you actually understand. Fluxurize will grow from companion apps into a small ecosystem of tools that surface the right signals and let you act fast.</p>
+          <ul class="bullet-list" style="margin-top:18px;">
+            <li><span class="bullet-icon">•</span><span>Less dashboards, more clarity.</span></li>
+            <li><span class="bullet-icon">•</span><span>Tools that respect your time.</span></li>
+            <li><span class="bullet-icon">•</span><span>Privacy as a default, not as a feature.</span></li>
+          </ul>
+        </div>
+        <div class="surface-highlight">
+          <h3 style="margin-top:0;">Privacy and trust first</h3>
+          <p class="muted">Fluxurize apps connect directly from your device to your automation platforms. We do not proxy your traffic, we do not run analytics SDKs, and credentials stay in the system keychain.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container section-alt">
+        <div class="section-header" style="margin-bottom:20px;">
+          <div class="section-kicker">What is next</div>
+          <h2 class="section-title">Building for teams that move fast</h2>
+          <p class="section-subtitle">We are pushing beyond companion apps to give automation teams speed and confidence.</p>
+        </div>
+        <div class="small-grid">
+          <div class="subtle-card">
+            <h4 style="margin:0 0 6px 0;">More platforms</h4>
+            <p class="muted" style="margin:0;">Support for more services and deeper integrations across automation stacks.</p>
+          </div>
+          <div class="subtle-card">
+            <h4 style="margin:0 0 6px 0;">Lightweight insights</h4>
+            <p class="muted" style="margin:0;">AI-powered highlights that point to real issues and opportunities.</p>
+          </div>
+          <div class="subtle-card">
+            <h4 style="margin:0 0 6px 0;">Shared layer</h4>
+            <p class="muted" style="margin:0;">Monitoring, notifications and team visibility that work across products.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container surface-highlight" style="text-align:center;">
+        <div class="section-kicker" style="margin:0 auto 12px auto;">Start today</div>
+        <h2 class="section-title" style="margin-bottom:10px;">Start with Fluxurize n8n today</h2>
+        <p class="section-subtitle" style="margin:0 auto 18px auto; max-width:640px;">Get a native iOS companion for your n8n instances and keep your workflows close, even when you are away from your desk.</p>
+        <a class="btn btn-primary" href="https://apps.apple.com" target="_blank" rel="noreferrer">Download Fluxurize n8n on the App Store</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:14px; flex-wrap:wrap;">
+      <span>© Fluxurize, 2025</span>
       <nav>
         <a href="privacy.html">Privacy</a>
         <a href="terms.html">Terms</a>
         <a href="support.html">Support</a>
       </nav>
-    </footer>
-  </div>
-</main>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
