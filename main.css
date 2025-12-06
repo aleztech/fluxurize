@@ -750,6 +750,14 @@ img {
   overflow: hidden;
 }
 
+.app-mockup .inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+}
+
 .app-logo-badge {
   width: 56px;
   height: 56px;
