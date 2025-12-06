@@ -750,6 +750,51 @@ img {
   overflow: hidden;
 }
 
+.app-logo-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.app-logo-badge img {
+  width: 36px;
+  height: 36px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Versión grande para el hero */
+.app-logo-badge-large {
+  width: 72px;
+  height: 72px;
+  border-radius: 24px;
+}
+
+.app-logo-badge-large img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Flex layout para el hero */
+.product-hero-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .product-hero-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* Products page */
 
 .page {
